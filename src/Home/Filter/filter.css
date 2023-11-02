@@ -1,0 +1,46 @@
+.region-filter-container {
+   margin: 0 var(--side-margin) 1.5rem var(--side-margin);
+   position: relative;
+   color: var(--faded-text-clr);
+   font-weight: 600;
+   z-index: 1;
+   box-shadow: var(--element-shadow);
+}
+
+.region-filter {
+   background: var(--element-color);
+   align-self: baseline;
+   height: var(--filter-height);
+   width: clamp(150px, 55vw, 250px);
+   border-radius: 5px;
+   font-size: 0.95rem;
+   padding: 0 1.5rem;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.region-filter:hover {
+   cursor: pointer;
+}
+
+.filter-choices {
+   width: 100%;
+   background: var(--element-color);
+   position: absolute;
+   top: calc(100% + 10px);
+   padding: 1rem 1.5rem;
+   border-radius: 5px;
+   box-shadow: var(--element-shadow);
+   visibility: inherit;
+}
+
+.filter-choices div {
+   margin: 10px 0;
+}
+
+.filter-choices div:hover {
+   cursor: pointer;
+   filter: contrast(50%);
+}

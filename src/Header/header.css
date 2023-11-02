@@ -1,0 +1,27 @@
+header {
+   background: var(--element-color);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1.5rem var(--side-margin);
+   width: 100%;
+   height: var(--header-height);
+   box-shadow: var(--element-shadow);
+   position: fixed;
+   top: 0;
+   z-index: 2;
+}
+
+header h1 {
+   font-size: 16px;
+   font-weight: 800;
+}
+
+header .dark-mode {
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.dark-mode:hover {
+   cursor: pointer;
+}

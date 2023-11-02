@@ -1,0 +1,40 @@
+.search-bar {
+   --input-width: 80%;
+   --button-width: calc(100% - var(--input-width));
+   width: clamp(300px, calc(100% - var(--side-margin) * 2), 500px);
+   height: var(--filter-height);
+   display: flex;
+   margin: 0 var(--side-margin) 1.5rem var(--side-margin);
+   border-radius: 5px;
+   background: var(--element-color);
+   box-shadow: var(--element-shadow);
+}
+
+.search-bar :is(button, input) {
+   height: 100%;
+   outline: none;
+   border: none;
+   background: transparent;
+}
+
+.search-bar button {
+   width: var(--button-width);
+}
+
+.search-bar input {
+   width: var(--input-width);
+   color: var(--text-clr);
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 0.95rem;
+   cursor: pointer;
+}
+
+.search-bar input::placeholder {
+   color: var(--faded-text-clr);
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 0.95rem;
+}
+
+.search-bar input:focus::placeholder {
+   color: transparent;
+}

@@ -1,0 +1,109 @@
+.details-container {
+   background: var(--background-clr);
+   position: fixed;
+   z-index: 1;
+   inset: 0;
+   top: var(--header-height);
+   padding: 32px var(--side-margin);
+   overflow: auto;
+}
+
+.details-back_btn {
+   background: var(--element-color);
+   color: var(--faded-text-clr);
+   box-shadow: var(--element-shadow);
+   border: none;
+   border-radius: 3px;
+   padding: 0.5em 1.5em;
+   display: block;
+   margin-left: 2rem;
+}
+
+.details-back_btn:hover {
+   cursor: pointer;
+}
+
+.details {
+   margin: 2rem 0;
+   display: grid;
+   grid-template-columns: 1fr;
+   row-gap: 2rem;
+   user-select: text;
+}
+
+.details h2 {
+   margin-bottom: 1rem;
+}
+
+.details p {
+   font-weight: 300;
+}
+
+.details strong {
+   font-weight: 600;
+}
+
+.details>div {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.details-flag {
+   width: 100%;
+   aspect-ratio: 2/1.4;
+}
+
+.more-details-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   column-gap: 5rem;
+   row-gap: 1rem;
+}
+
+.border-countries {
+   margin-top: 1rem;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   column-gap: 5px;
+   row-gap: 5px;
+}
+
+.border-countries:has(.border:hover) .border:not(:hover) {
+   scale: 0.95;
+   opacity: 0.8;
+}
+
+
+.border {
+   background: var(--element-color);
+   display: inline-block;
+   padding: 3px 1rem;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: var(--element-shadow);
+   transition: scale 0.3s, opacity 0.3s;
+}
+
+.border:hover {
+   cursor: pointer;
+}
+
+@media (min-width: 800px) {
+   .details-back_btn {
+      margin-left: var(--side-margin);
+   }
+}
+
+@media (min-width: 650px) {
+   .details {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 5vw;
+   }
+}

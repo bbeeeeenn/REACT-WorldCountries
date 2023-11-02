@@ -1,0 +1,34 @@
+.home {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+
+   --filter-height: 60px;
+}
+
+.search-container {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-flow: row wrap;
+   row-gap: 1rem;
+   margin-bottom: 1rem;
+}
+
+.body {
+   padding: 0 var(--side-margin) 5rem var(--side-margin);
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 3rem;
+   row-gap: 2rem;
+   width: 100%;
+}
+
+@media (min-width: 700px) {
+   .body {
+      row-gap: 4rem;
+   }
+}
