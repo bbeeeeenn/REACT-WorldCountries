@@ -97,7 +97,7 @@
 
 @media (min-width: 800px) {
    .details-back_btn {
-      margin-left: var(--side-margin);
+      margin-left: 1rem;
    }
 }
 

@@ -66,7 +66,7 @@ function Details({ countries, data, setDetails, setShowDetails }) {
 							</p>
 							<p>
 								<strong>Capital: </strong>
-								{data.capital && data.capital}
+								{data.capital ? data.capital : "None"}
 							</p>
 						</div>
 						<div className="more-details-2">
@@ -76,11 +76,14 @@ function Details({ countries, data, setDetails, setShowDetails }) {
 							</p>
 							<p>
 								<strong>Currencies: </strong>
-								{data.currencies.map((cur) => cur.name).join(", ")}
+								{data.currencies
+									? data.currencies.map((cur) => cur.name).join(", ")
+									: "None"}
 							</p>
 							<p>
 								<strong>Languages: </strong>
-								{data.languages.map((lang) => lang.name).join(", ")}
+								{data.languages &&
+									data.languages.map((lang) => lang.name).join(", ")}
 							</p>
 						</div>
 					</div>

@@ -1,8 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import {
+	faMagnifyingGlass,
+	faCircleXmark,
+} from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark as regularXmark } from "@fortawesome/free-regular-svg-icons";
 import "./search-bar.css";
 
 function SearchBar({ darkMode, search, setSearch }) {
+	function clear() {
+		setSearch("");
+	}
+
 	return (
 		<form
 			className="search-bar"
@@ -26,7 +34,17 @@ function SearchBar({ darkMode, search, setSearch }) {
 				value={search}
 				type="text"
 				placeholder="Search for a country..."
+				maxlength="20"
 			></input>
+			{search.length > 0 && (
+				<div onClick={clear} className="clear-btn">
+					{darkMode ? (
+						<FontAwesomeIcon style={{}} icon={faCircleXmark} />
+					) : (
+						<FontAwesomeIcon icon={regularXmark} />
+					)}
+				</div>
+			)}
 		</form>
 	);
 }

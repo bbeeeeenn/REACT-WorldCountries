@@ -3,8 +3,8 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import "./filter.css";
 import { useState } from "react";
 
+const regions = ["Africa", "America", "Asia", "Europe", "Oceania", "Polar"];
 function Filter({ filter, setFilter }) {
-	const regions = ["Africa", "America", "Asia", "Europe", "Oceania"];
 	const [showChoices, setShowChoices] = useState("hidden");
 	function handleClick() {
 		setShowChoices(showChoices == "hidden" ? "visible" : "hidden");

@@ -1,11 +1,6 @@
 import "./country-card.css";
 function CountryCard({ data, setShowDetails, setDetails }) {
 	const { name, population, region, capital, flags } = data;
-	const flagStyles = {
-		background: `url(${flags.svg})`,
-		backgroundPosition: "center center",
-		backgroundSize: "cover",
-	};
 
 	return (
 		<div
@@ -15,7 +10,7 @@ function CountryCard({ data, setShowDetails, setDetails }) {
 			}}
 			className="country-card"
 		>
-			<div style={flagStyles} className="card-flag"></div>
+			<img src={flags.png} className="card-flag"></img>
 			<div className="country-card-info">
 				<h3>{name}</h3>
 				<p>
@@ -25,7 +20,7 @@ function CountryCard({ data, setShowDetails, setDetails }) {
 					<strong>Region:</strong> {region}
 				</p>
 				<p>
-					<strong>Capital:</strong> {capital}
+					<strong>Capital:</strong> {capital ? capital : "None"}
 				</p>
 			</div>
 		</div>

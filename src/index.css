@@ -34,3 +34,14 @@ body {
    align-items: center;
    padding-top: 112px;
 }
+
+*::-webkit-scrollbar {
+   background: var(--background-clr);
+   width: 5px;
+   height: 5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+   background: rgb(105, 105, 105);
+   border-radius: 10px;
+}
